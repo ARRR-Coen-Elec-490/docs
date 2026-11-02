@@ -1,0 +1,13 @@
+{
+    "name": "Documentation Repository",
+    "build": { "dockerfile": "Dockerfile" },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "yzhang.markdown-all-in-one",
+                "DavidAnson.vscode-markdownlint"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}

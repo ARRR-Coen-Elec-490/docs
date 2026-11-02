@@ -1,0 +1,45 @@
+name: "Hardware Printable Creation"
+
+on:
+    push:
+        branches: [ "main" ]
+        paths:
+            - "hardware-documentation/*.kicad_sch"
+            - "hardware-documentation/*.kicad_pcb"
+
+jobs:
+    render-pcb-schematics:
+        name: Compile KiCAD to PDF
+        runs-on: ubuntu-latest
+        steps:
+            # STEP 1: Pull the latest code, including any Git LSF Assets
+            - name: Checkout Code Base
+              uses: actions/checkout@v4
+              with:
+                lfs: true
+            
+            # STEP 2: Run KiBOT to generate printables for your working files
+            - name: Export Vector Schematics
+              uses: INTI-CMNB/KiBot@v2_k8
+              with:
+                schema: "hardware-documentation/*.kicad_sch"
+                board: "hardware-documentation/*.kicad_pcb"
+                config: "default"
+                targets: "pdf_sch pdf_pcb"
+            
+            # STEP 3: Upload the generated printables to the repository
+            - name: Commit Printables to Repository
+              run: |
+                git config --global user.name "github-actions[bot]"
+                git config --global user.email "github-actions[bot]@:users.noreply.github.com"
+
+                # Create a folder if it does not already exist
+                mkdir -p hardware-documentation/schematics
+                mv Generated/*.pdf hardware-documentation/schematics/
+
+                # Stage the commits
+                git add hardware-documentation/schematics/*.pdf
+
+                # [skip ci] to prevent an infinite loop
+                git diff-index --quiet HEAD || git commit -m "docs/hardware-documentation: auto-generate human-readable schematics [skip ci]"
+                git push

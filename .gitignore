@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Repository-Specific Overrides
+.vscode/*.log
+.devcontainer/.localhistory/
+*.tmp

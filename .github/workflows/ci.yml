@@ -1,0 +1,19 @@
+name: "Documentation Quality Gate"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Base
+        uses: actions/checkout@v4
+      
+      - name: Verify Markdown Formating Style
+        uses: DavidAnson/markdownlint-cli2-action@v1
+        with:
+          globs: "**/*.md"
