@@ -9,6 +9,8 @@ This file will contain a detailed black box diagram for the ABTRS System Archite
 ```mermaid
 ---
 title: Black-Box Diagram
+config:
+    layout: elk
 ---
 flowchart LR
     %% Inputs
