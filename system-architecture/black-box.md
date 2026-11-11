@@ -14,6 +14,7 @@ flowchart LR
     %% Inputs
     subgraph left_col[ ]
         subgraph bio_in[Biological Signal Inputs]
+            direction TB
             bpm[Heart Rate]
             spo2[Blood Oxygen]
             chest[Chest Contribution]
@@ -28,6 +29,7 @@ flowchart LR
         end
 
         subgraph sys_in[System Inputs]
+            direction TB
             power[Power]
             temp[System<br/>Temperature]
 
@@ -40,6 +42,7 @@ flowchart LR
         direction TB
         %% System
         subgraph system[System]
+            direction TB
             mcu[Embedded<br/>Microcontroller<br/>Layer]
             app[Mobile<br/>Application<br/>Layer]
             ml[Machine<br/>Learning<br/>Layer]
@@ -58,13 +61,14 @@ flowchart LR
             body_heat[Body Heat]
 
             %% Hidden structural connections
-            sweat~~~body_heat
+            %%sweat~~~body_heat
         end
     end
 
 
     %% Outputs
     subgraph out[Ouputs]
+        direction TB
         audio[Audio<br/>Cues]
         visual[Visual<br/>Cues]
         chart[Live<br/>Charting]
@@ -79,6 +83,7 @@ flowchart LR
     bio_in ===> system
     sys_in ===> system
     system ===> out
+    system <---> env
 
     %% Styling
     style left_col fill:none, stroke:none
