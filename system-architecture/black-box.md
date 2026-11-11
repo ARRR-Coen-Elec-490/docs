@@ -13,6 +13,7 @@ title: Black-Box Diagram
 flowchart LR
     %% Inputs
     subgraph left_col[ ]
+        direction TB
         subgraph bio_in[Biological Signal Inputs]
             direction TB
             bpm[Heart Rate]
@@ -61,7 +62,7 @@ flowchart LR
             body_heat[Body Heat]
 
             %% Hidden structural connections
-            %%sweat~~~body_heat
+            sweat~~~body_heat
         end
     end
 
@@ -83,9 +84,9 @@ flowchart LR
     bio_in ===> system
     sys_in ===> system
     system ===> out
-    system <---> env
 
     %% Styling
+    %% Hidden structural details
     style left_col fill:none, stroke:none
     style center_col fill:none, stroke:none
 ```
