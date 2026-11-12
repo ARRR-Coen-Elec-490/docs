@@ -25,7 +25,8 @@
         "list_items": false
     },
     "MD033": {
-        "allowed_elements": ["details", "summary", "img", "br"]
+        "allowed_elements": ["details", "summary", "img", "br", "p",
+                             "div", "span"]
     },
     "MD034": false,
     "MD036": false,
