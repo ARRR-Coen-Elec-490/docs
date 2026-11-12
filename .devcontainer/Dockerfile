@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:1.0.0-alpine-3.19
+FROM mcr.microsoft.com/devcontainers/base:alpine
 
 RUN apk add --no-cache nodejs npm
 
