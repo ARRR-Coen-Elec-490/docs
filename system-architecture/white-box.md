@@ -49,8 +49,14 @@ The image above provides an expanded view of the ambedded microcontroller layer,
 ### 3.3 BLE Layer
 
 <div align="center">
-    <img src="./assets/" alt="BLE Layer">
+    <img src="./assets/ble-layer.png" alt="BLE Layer">
 </div>
+
+<br>
+
+The image above provides an expanded view of the bridge between the MCU and Mobile Application layers, known as the *BLE Layer*.  This is a purely virtual layer created using a Generic Attribute Profile (*GATT*) Bluetooth Low-Energy (*BLE*) communication protocol.  Information communicated from the mobile application layer to the MCU layer consists of relevant user data which will provide contextual data for the microcontroller-hosted machine learning model.  In the other direction, a high-volume, real-time data stream will be running throughout a given post-exercise recovery session.  Due to the nature of this data stream, and the specific architecture chosen for the mobile application, using an uncompressed data stream will cause the mobile application layer to fail.  As such, the ```Protobuf``` protocol buffer framework must be implemented to lighten the load of the BLE layer.  In accordance with this framework, specific libraries are needed for both the MCU and mobile application layers, in their respective languages.
+
+<br>
 
 ### 3.4 Mobile Application Layer
 
