@@ -37,8 +37,14 @@ The image above provides an expanded view of the hardware layer, as well as the 
 ### 3.2 Embedded MCU Layer
 
 <div align="center">
-    <img src="./assets/" alt="Embedded MCU Layer">
+    <img src="./assets/mcu-layer.png" alt="Embedded MCU Layer">
 </div>
+
+<br>
+
+The image above provides an expanded view of the ambedded microcontroller layer, called the *MCU Layer*.  Here, the MCU layer is built on C/C++ to create a fast and reliable data processing and handling framework for the ABTRS system.  The input handling logic will capture and clean any remaining noise present within the input signals, before passing it to the pre-processing logic.  In addition, certain characteristics of the user, such as their age, bioligical sex, weight, etc., will be sent from the mobile app to microcontroller over BLE, to provide contextual information.  The pre-processing logic will infer several calculated metrics over a given window of time, extracting distinguishable *features* from the data.  Such features will be passed to a *Traditional Classification Machine Learning Model*, hosted on the microcontroller.  From these features, the algorithm will output certain *labels*, which will then be passed back to the primary internal process of the MCU layer.  Finally, the input signals, calculated, windowed metrics, and labels will be packaged, encoded, compressed, and sent to the BLE layer.
+
+<br>
 
 ### 3.3 BLE Layer
 
