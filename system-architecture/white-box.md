@@ -61,8 +61,25 @@ The image above provides an expanded view of the bridge between the MCU and Mobi
 ### 3.4 Mobile Application Layer
 
 <div align="center">
-    <img src="./assets/" alt="Mobile Application Layer">
+    <img src="./assets/app-layer.png" alt="Mobile Application Layer">
 </div>
+
+<br>
+
+The image above provides an expanded view of the application layer of the system, called the *Mobile Application Layer*.  Here, the layer is built as an end-to-end TypeScript Expo application.  In addition, several modules, including React Native, SQLite, and Native WebSokctes, among others, are leveraged to create support for both real-time, offline session operations, as well as asynchronous, online inter-session operations.  Due to the heavy real-time stream of data transported over the BLE layer, the application layer does not follow a traditional architecture, where the backend handles a majority of the operations, and the frontend serves as a pure user interface (*UI*).  In this case, the "backend" serves as the link between the application and cloud layers, whereas the "frontend" serve as the primary "core" or "engine" of this system layer.  During a given session, the application will process incoming data packets, sending them to be:
+
+1. Stored in a temporary ```SQLite``` database.
+2. Output to the user via several audio-visual elements.
+
+In the event that a disruption occurs during the session, a failsafe operation will be defined to ensure the session can end gracefully.  After the session has ended, provided a Wi-Fi connection has been established, the application layer will complete the following actions:
+
+1. Push the current ```SQLite``` database contents to a ```MongoDB``` database.
+2. Re-train, re-test, cross-validate, and update the reward/policy functions for the Reinforcement Learning Algorithm hosted by the cloud layer.
+3. The updated RL weights will then be communicated to the application layer in the form of a ```.json``` file.
+
+Finally, in terms of inter-session activity, the user will be able to view a long-term, comprehensive dashboard of their overall progress.  Hence, the inter-session operations will follow a fundamentally different data path compared to live session operations.
+
+<br>
 
 ### 3.5 Cloud Services Layer
 
