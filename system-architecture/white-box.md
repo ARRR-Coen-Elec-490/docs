@@ -89,12 +89,18 @@ Finally, in terms of inter-session activity, the user will be able to view a lon
 
 <br>
 
-The image above provides an expanded view of the different serves hosted by the cloud layer, called the *Cloud Services Layer*.  The first of the three services is the Reinforcement Learning Machine Learning Model hosted by an Azure Cloud Space.  This is where the model's policy and reward functions will be trained tested, and updated, before ultimately being sent to the mobile application for use.  The second service is the MongoDB Atlas NoSQL database, which will serve as the long-term storage solution for our users' data.  At the end of a given session, the contents of the mobile application's temporary storage will be pushed to the MongoDB database.  After this has been completed, this service will send the Azure service a message to trigger its update operations.  The final service contained within this layer is a Prometheus Time-Series database, which will be used to monitor the health of the other two services.  In the event of a service disruption, appropriate action must be taken to mitigate further errors and replace erroneous data by repeating the interrupted post-session operations.
+The image above provides an expanded view of the different servers hosted by the cloud layer, called the *Cloud Services Layer*.  The first of the three services is the Reinforcement Learning Model hosted by an Azure Cloud Space.  This is where the model's policy and reward functions will be trained tested, and updated, before ultimately being sent to the mobile application for use.  The second service is the MongoDB Atlas NoSQL database, which will serve as the long-term storage solution for our users' data.  At the end of a given session, the contents of the mobile application's temporary storage will be pushed to the MongoDB database.  After this has been completed, this service will send the Azure service a signal to trigger its update operations.  The final service contained within this layer is a Prometheus Time-Series database, which will be used to monitor the health of the other two services.  In the event of a service disruption, appropriate action must be taken to mitigate further errors and replace erroneous data by repeating the interrupted post-session operations.
 
 <br>
 
 ### 3.6 Machine Learning Layer
 
 <div align="center">
-    <img src="./assets/" alt="Machine Learning Layer">
+    <img src="./assets/ml-layer.png" alt="Machine Learning Layer">
 </div>
+
+<br>
+
+The image above provides an isolated view of the machine learning components of the system, called the *Machine Learning Layer*.  Unlike the other layers, the machine learning layer spans across the entirety of the system's software architecture.  In the MCU layer, a traditional classification machine learning model will be used to identify the breathing pace and posture of the user, which will give the system a better comprehension of their state of recovery.  This model will originally be developed, trained, and tested in Python, but will subsequently be translated to C/C++ for practical use.  The labels produced by first model will be fed to a Reinforcement Learning Model that is used in the application and cloud layers.  This second model will be used to control the pace of the real-time audio-visual cues being fed to the user.  The actual model, hosted by the Azure Cloud Space ([Section 3.5](#35-cloud-services-layer)), will be developed, trained, and tested in Python, similar to the first model.  However, a static, TypeScript-based copy will live in the application layer for practical use, where strict guardrails will be put in place to ensure the safety of the user.  The TypeScript version of the second model will be updated periodically via a shared ```.json``` file containing the relevant policy/reward weights.  Although this setup breaks certain traditional software architectures, the machine learning layer has been carefully designed to leverage the full capability of the frameworks and physical technology being used in this system.
+
+<br>
