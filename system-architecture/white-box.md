@@ -75,7 +75,7 @@ In the event that a disruption occurs during the session, a failsafe operation w
 
 1. Push the current ```SQLite``` database contents to a ```MongoDB``` database.
 2. Re-train, re-test, cross-validate, and update the reward/policy functions for the Reinforcement Learning Algorithm hosted by the cloud layer.
-3. The updated RL weights will then be communicated to the application layer in the form of a ```.json``` file.
+3. Communicate the updated RL weights to the application layer in the form of a ```.json``` file.
 
 Finally, in terms of inter-session activity, the user will be able to view a long-term, comprehensive dashboard of their overall progress.  Hence, the inter-session operations will follow a fundamentally different data path compared to live session operations.
 
@@ -84,8 +84,14 @@ Finally, in terms of inter-session activity, the user will be able to view a lon
 ### 3.5 Cloud Services Layer
 
 <div align="center">
-    <img src="./assets/" alt="Cloud Services Layer">
+    <img src="./assets/cloud-layer.png" alt="Cloud Services Layer">
 </div>
+
+<br>
+
+The image above provides an expanded view of the different serves hosted by the cloud layer, called the *Cloud Services Layer*.  The first of the three services is the Reinforcement Learning Machine Learning Model hosted by an Azure Cloud Space.  This is where the model's policy and reward functions will be trained tested, and updated, before ultimately being sent to the mobile application for use.  The second service is the MongoDB Atlas NoSQL database, which will serve as the long-term storage solution for our users' data.  At the end of a given session, the contents of the mobile application's temporary storage will be pushed to the MongoDB database.  After this has been completed, this service will send the Azure service a message to trigger its update operations.  The final service contained within this layer is a Prometheus Time-Series database, which will be used to monitor the health of the other two services.  In the event of a service disruption, appropriate action must be taken to mitigate further errors and replace erroneous data by repeating the interrupted post-session operations.
+
+<br>
 
 ### 3.6 Machine Learning Layer
 
