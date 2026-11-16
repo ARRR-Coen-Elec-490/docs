@@ -7,7 +7,7 @@ This file will contain a detailed black box diagram for the ABTRS System Archite
 ## 2. Diagram
 
 <div align="center">
-    <img src="black-box.png" alt="Black Box Diagram">
+    <img src="./assets/black-box.png" alt="Black Box Diagram">
 </div>
 
 ## 3. Explanation
