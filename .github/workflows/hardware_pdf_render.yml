@@ -4,42 +4,55 @@ on:
     push:
         branches: [ "main" ]
         paths:
-            - "hardware-documentation/*.kicad_sch"
-            - "hardware-documentation/*.kicad_pcb"
+            - "hardware-documentation/**/*.kicad_sch"
+            - "hardware-documentation/**/*.kicad_pcb"
+            - "hardware-documentation/**/*.kicad_pro"
+    workflow_dispatch:
+
+permissions:
+    contents: write
 
 jobs:
     render-pcb-schematics:
         name: Compile KiCAD to PDF
         runs-on: ubuntu-latest
+        container:
+          image: ghcr.io/inti-cmnb/kicad8_auto_full:latest
         steps:
-            # STEP 1: Pull the latest code, including any Git LSF Assets
-            - name: Checkout Code Base
-              uses: actions/checkout@v4
-              with:
-                lfs: true
-            
-            # STEP 2: Run KiBOT to generate printables for your working files
-            - name: Export Vector Schematics
-              uses: INTI-CMNB/KiBot@v2_k8
-              with:
-                schema: "hardware-documentation/*.kicad_sch"
-                board: "hardware-documentation/*.kicad_pcb"
-                config: "default"
-                targets: "pdf_sch pdf_pcb"
-            
-            # STEP 3: Upload the generated printables to the repository
-            - name: Commit Printables to Repository
-              run: |
-                git config --global user.name "github-actions[bot]"
-                git config --global user.email "github-actions[bot]@:users.noreply.github.com"
+          # STEP 1: Pull the latest code, including any Git LSF Assets
+          - name: Checkout Code Base
+            uses: actions/checkout@v6
+            with:
+              lfs: true
 
-                # Create a folder if it does not already exist
-                mkdir -p hardware-documentation/schematics
-                mv Generated/*.pdf hardware-documentation/schematics/
+          # STEP 2: Run KiBOT to generate printables for your working files
+          - name: Export Vector Schematics
+            run: |
+              mkdir -p hardware-documentation/schematics
+              find hardware-documentation -name '*.kicad_pro' | while read -r pro; do
+                dir=$(dirname "$pro")
+                base=$(basename "$pro" .kicad_pro)
+                sch="$dir/$base.kicad_sch"
+                pcb="$dir/$base.kicad_pcb"
 
-                # Stage the commits
-                git add hardware-documentation/schematics/*.pdf
+                if [ -f "$sch" ]; then
+                  kibot -e "$sch" -d hardware-documentation/schematics pdf_sch
+                fi
+                if [ -f "$pcb" ]; then
+                  kibot -b "$pcb" -e "$sch" -d hardware-documentation/schematics pdf_pcb
+                fi
+              done
 
-                # [skip ci] to prevent an infinite loop
-                git diff-index --quiet HEAD || git commit -m "docs/hardware-documentation: auto-generate human-readable schematics [skip ci]"
-                git push
+          # STEP 3: Upload the generated printables to the repository
+          - name: Commit Printables to Repository
+            run: |
+              git config --global --add safe.directory "$GITHUB_WORKSPACE"
+              git config --global user.name "github-actions[bot]"
+              git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+              # Stage the commits
+              git add hardware-documentation/schematics/
+
+              # [skip ci] to prevent an infinite loop
+              git diff-index --quiet HEAD || git commit -m "docs/hardware-documentation: auto-generate human-readable schematics [skip ci]"
+              git push
