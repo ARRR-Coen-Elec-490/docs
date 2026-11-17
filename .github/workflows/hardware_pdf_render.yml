@@ -29,6 +29,25 @@ jobs:
           - name: Export Vector Schematics
             run: |
               mkdir -p hardware-documentation/schematics
+              cat << 'EOF' > /tmp/kibot_sch.yaml
+              kibot:
+                version: 1
+              outputs:
+                - name: 'print_sch'
+                  comment: "Prints schematics to PDF"
+                  type: pdf_sch_print
+              EOF
+
+              cat << 'EOF' > /tmp/kibot_pcb.yaml
+              kibot:
+                version: 1
+              outputs:
+                - name: 'print_pcb'
+                  comment: "Prints PCB to PDF"
+                  type: pdf_pcb_print
+                  layers: all
+              EOF
+
               find hardware-documentation -name '*.kicad_pro' | while read -r pro; do
                 dir=$(dirname "$pro")
                 base=$(basename "$pro" .kicad_pro)
@@ -36,10 +55,10 @@ jobs:
                 pcb="$dir/$base.kicad_pcb"
 
                 if [ -f "$sch" ]; then
-                  kibot -e "$sch" -d hardware-documentation/schematics pdf_sch
+                  kibot -c /tmp/kibot_sch.yaml -e "$sch" -d "$GITHUB_WORKSPACE/hardware-documentation/schematics"
                 fi
                 if [ -f "$pcb" ]; then
-                  kibot -b "$pcb" -e "$sch" -d hardware-documentation/schematics pdf_pcb
+                  kibot -c /tmp/kibot_pcb.yaml -b "$pcb" -e "$sch" -d "$GITHUB_WORKSPACE/hardware-documentation/schematics"
                 fi
               done
 
@@ -48,7 +67,7 @@ jobs:
             run: |
               git config --global --add safe.directory "$GITHUB_WORKSPACE"
               git config --global user.name "github-actions[bot]"
-              git config --global user.email "github-actions[bot]@users.noreply.github.com"
+              git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
               # Stage the commits
               git add hardware-documentation/schematics/
