@@ -55,7 +55,7 @@ jobs:
                 pcb="$dir/$base.kicad_pcb"
 
                 if [ -f "$sch" ]; then
-                  kibot -c /tmp/kibot_sch.yaml -e "$sch" -d "$GITHUB_WORKSPACE/hardware-documentation/schematics"
+                  kibot --no-board -c /tmp/kibot_sch.yaml -e "$sch" -d "$GITHUB_WORKSPACE/hardware-documentation/schematics"
                 fi
                 if [ -f "$pcb" ]; then
                   kibot -c /tmp/kibot_pcb.yaml -b "$pcb" -e "$sch" -d "$GITHUB_WORKSPACE/hardware-documentation/schematics"
