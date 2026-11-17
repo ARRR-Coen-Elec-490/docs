@@ -25,29 +25,10 @@ jobs:
             with:
               lfs: true
 
-          # STEP 2: Run KiBOT to generate printables for your working files
+          # STEP 2: Run KiCAD CLI to generate printables for your working files
           - name: Export Vector Schematics
             run: |
               mkdir -p hardware-documentation/schematics
-              cat << 'EOF' > /tmp/kibot_sch.yaml
-              kibot:
-                version: 1
-              outputs:
-                - name: 'print_sch'
-                  comment: "Prints schematics to PDF"
-                  type: pdf_sch
-              EOF
-
-              cat << 'EOF' > /tmp/kibot_pcb.yaml
-              kibot:
-                version: 1
-              outputs:
-                - name: 'print_pcb'
-                  comment: "Prints PCB to PDF"
-                  type: pdf_pcb
-                  layers: all
-              EOF
-
               find hardware-documentation -name '*.kicad_pro' | while read -r pro; do
                 dir=$(dirname "$pro")
                 base=$(basename "$pro" .kicad_pro)
@@ -55,23 +36,20 @@ jobs:
                 pcb="$dir/$base.kicad_pcb"
 
                 if [ -f "$sch" ]; then
-                  kibot --no-board -c /tmp/kibot_sch.yaml -e "$sch" -d "$GITHUB_WORKSPACE/hardware-documentation/schematics"
+                  kicad-cli sch export pdf "$sch" -o "$GITHUB_WORKSPACE/hardware-documentation/schematics/${base}_schematic.pdf"
                 fi
                 if [ -f "$pcb" ]; then
-                  kibot -c /tmp/kibot_pcb.yaml -b "$pcb" -e "$sch" -d "$GITHUB_WORKSPACE/hardware-documentation/schematics"
+                  kicad-cli pcb export pdf "$pcb" -o "$GITHUB_WORKSPACE/hardware-documentation/schematics/${base}_pcb.pdf" --layers "F.Cu,B.Cu,F.SilkS,B.SilkS,Edge.Cuts"
                 fi
               done
 
           # STEP 3: Upload the generated printables to the repository
-          - name: Commit Printables to Repository
-            run: |
-              git config --global --add safe.directory "$GITHUB_WORKSPACE"
-              git config --global user.name "github-actions[bot]"
-              git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-              # Stage the commits
-              git add hardware-documentation/schematics/
-
-              # [skip ci] to prevent an infinite loop
-              git diff-index --quiet HEAD || git commit -m "docs/hardware-documentation: auto-generate human-readable schematics [skip ci]"
-              git push
+          - name: Create Pull Request for the Printables
+            uses: peter-evans/create-pull-request@v7
+            with:
+              commit-message: "docs/hardware-documentation: auto-generate human-readable schematics"
+              branch: docs/auto-schematics
+              delete-branch: true
+              title: "docs: auto-generate KiCad PDF schematics"
+              body: |
+                Automated PDF export of updated KiCad schematics and PCBs from `main`.
