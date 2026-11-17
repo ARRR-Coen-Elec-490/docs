@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "Seeed_Studio_XIAO_Series")(type "KiCad")(uri "${KIPRJMOD}/lib/Seeed_Studio_XIAO_Series.pretty")(options "")(descr "Seeed XIAO footprints (CC BY-SA 4.0)"))
+  (lib (name "ABTRS")(type "KiCad")(uri "${KIPRJMOD}/lib/ABTRS.pretty")(options "")(descr "Team 23 project footprints"))
+)
