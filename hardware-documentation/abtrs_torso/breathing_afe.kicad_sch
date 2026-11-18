@@ -2212,7 +2212,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL10B334KO8NNNC "
+		(property "MPN" "CL10B334KO8NNNC"
 			(at 158.75 123.19 90)
 			(hide yes)
 			(show_name no)
@@ -3235,7 +3235,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL "
+		(property "MPN" "RC0603FR-07100KL"
 			(at 158.75 114.3 90)
 			(hide yes)
 			(show_name no)

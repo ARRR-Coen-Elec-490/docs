@@ -653,7 +653,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "fab/gerbers/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -666,7 +666,7 @@
       "method": 1,
       "sort_order": 0
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "outputs/abtrs_torso_bom.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",

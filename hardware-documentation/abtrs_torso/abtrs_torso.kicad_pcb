@@ -11,7 +11,7 @@
 		(title "ABTRS Torso Board")
 		(date "2026-11-18")
 		(rev "0.1")
-		(company "ELEC 490 - Team 23")
+		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
 	(layers
 		(0 "F.Cu" signal)
