@@ -12960,6 +12960,114 @@
 		(layer "Edge.Cuts")
 		(uuid "6d4495ab-28d2-487c-9751-7023446aeec9")
 	)
+	(gr_text "CHEST"
+		(at 122 87 0)
+		(layer "F.SilkS")
+		(uuid "2a288deb-cd7f-47db-826e-3b28f07458b9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "ABD"
+		(at 123 105 0)
+		(layer "F.SilkS")
+		(uuid "72ecc251-56bb-42b1-bf43-c1b3aef91cce")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "BATT"
+		(at 129.5 111.5 0)
+		(layer "F.SilkS")
+		(uuid "bbbe6540-59d1-4549-9fef-f1999f5cd2bc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+"
+		(at 131.5 112 0)
+		(layer "F.SilkS")
+		(uuid "892b1924-6e8c-46f4-b58a-0573742fe6be")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "-"
+		(at 137 112 0)
+		(layer "F.SilkS")
+		(uuid "2ce36a37-63a7-4bff-a10f-d74f8805da91")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SKIN"
+		(at 147 111.5 0)
+		(layer "F.SilkS")
+		(uuid "d93fbf94-e4a0-4890-904a-ad15444a960b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Team 23 2026-11-18"
+		(at 157 102.5 0)
+		(layer "F.SilkS")
+		(uuid "e2021cc5-2fed-4de5-bd7e-e8010570b2ac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "ABTRS Torso V0.1"
+		(at 158 100.5 0)
+		(layer "F.SilkS")
+		(uuid "c8892001-1041-48db-9e74-0393716fc810")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PPG"
+		(at 160.5 111.5 0)
+		(layer "F.SilkS")
+		(uuid "ad86016c-d443-4b59-a53d-4816a34448b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
 	(segment
 		(start 129 86)
 		(end 130.05 86)
