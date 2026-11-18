@@ -7,6 +7,12 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "ABTRS Torso Board")
+		(date "2026-11-18")
+		(rev "0.1")
+		(company "ELEC 490 - Team 23")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)
@@ -5971,7 +5977,7 @@
 		(descr "JST PH series connector, B2B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf)")
 		(tags "connector JST PH vertical")
 		(property "Reference" "J501"
-			(at 1 -2.9 0)
+			(at 1.5 -2.9 0)
 			(layer "F.SilkS")
 			(uuid "db8c33ff-1c58-4feb-b4ef-1280645704cf")
 			(effects
@@ -9284,7 +9290,7 @@
 		(descr "JST PH series connector, B5B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf)")
 		(tags "connector JST PH vertical")
 		(property "Reference" "J601"
-			(at 3 -3 0)
+			(at 4 -3 0)
 			(layer "F.SilkS")
 			(uuid "4eb49e6f-a3fa-484d-bf8f-7dc89d397a92")
 			(effects
@@ -12985,7 +12991,7 @@
 		)
 	)
 	(gr_text "BATT"
-		(at 129.5 111.5 0)
+		(at 129 111.5 0)
 		(layer "F.SilkS")
 		(uuid "bbbe6540-59d1-4549-9fef-f1999f5cd2bc")
 		(effects
@@ -12997,7 +13003,7 @@
 		)
 	)
 	(gr_text "+"
-		(at 131.5 112 0)
+		(at 132 112 0)
 		(layer "F.SilkS")
 		(uuid "892b1924-6e8c-46f4-b58a-0573742fe6be")
 		(effects
@@ -13009,7 +13015,7 @@
 		)
 	)
 	(gr_text "-"
-		(at 137 112 0)
+		(at 136.5 112 0)
 		(layer "F.SilkS")
 		(uuid "2ce36a37-63a7-4bff-a10f-d74f8805da91")
 		(effects

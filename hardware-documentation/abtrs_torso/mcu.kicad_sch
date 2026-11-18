@@ -5,8 +5,8 @@
 	(uuid "e51d2d45-12b7-5f2d-aeda-2e579f6662ba")
 	(paper "A4")
 	(title_block
-		(title "ABTRS Torso Board - MCU (XIAO nRF52840)")
-		(date "2026-11-16")
+		(title "ABTRS Torso Board")
+		(date "2026-11-18")
 		(rev "0.1")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
