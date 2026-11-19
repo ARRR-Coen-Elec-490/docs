@@ -43,29 +43,36 @@ jobs:
                   kicad-cli sch export pdf "$sch" -o "$GITHUB_WORKSPACE/hardware-documentation/schematics/${base}_schematic.pdf"
                 fi
                 if [ -f "$pcb" ]; then
-                  front_pdf="/tmp/${base}_front.pdf"
-                  back_pdf="/tmp/${base}_back.pdf"
+                  p1="/tmp/${base}_p1_front.pdf"
+                  p2="/tmp/${base}_p2_back.pdf"
+                  p3="/tmp/${base}_p3_labels.pdf"
                   out_pdf="$GITHUB_WORKSPACE/hardware-documentation/schematics/${base}_pcb.pdf"
 
-                  # Page 1: Front layers (Copper + Silkscreen + Fabrication + Board Outline)
+                  # Page 1: Red Front Copper Layer + Silkscreen + Title Block
                   kicad-cli pcb export pdf "$pcb" \
-                    -o "$front_pdf" \
-                    --layers "F.Cu,F.SilkS,F.Fab,Edge.Cuts" \
+                    -o "$p1" \
+                    --layers "F.Cu,F.SilkS,Edge.Cuts" \
+                    --include-border-title \
                     --scale 2.5
 
-                  # Page 2: Back layers (Mirrored horizontally for natural inspection)
+                  # Page 2: Blue Back Copper Layer + Silkscreen (Mirrored) + Title Block
                   kicad-cli pcb export pdf "$pcb" \
-                    -o "$back_pdf" \
-                    --layers "B.Cu,B.SilkS,B.Fab,Edge.Cuts" \
+                    -o "$p2" \
+                    --layers "B.Cu,B.SilkS,Edge.Cuts" \
                     --mirror \
+                    --include-border-title \
                     --scale 2.5
 
-                  # Merge Page 1 and Page 2 into the final PDF
-                  if command -v pdfunite >/dev/null 2>&1; then
-                    pdfunite "$front_pdf" "$back_pdf" "$out_pdf"
-                  else
-                    gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$out_pdf" "$front_pdf" "$back_pdf"
-                  fi
+                  # Page 3: Pure Black & White Labels + Component Outlines + Title Block
+                  kicad-cli pcb export pdf "$pcb" \
+                    -o "$p3" \
+                    --layers "F.SilkS,F.Fab,Edge.Cuts" \
+                    --black-and-white \
+                    --include-border-title \
+                    --scale 2.5
+
+                  # Merge the 3 pages into one PDF
+                  pdfunite "$p1" "$p2" "$p3" "$out_pdf"
                 fi
               done
 
