@@ -5,8 +5,8 @@
 	(uuid "1f3166a8-dbe6-5d77-b95f-48ec9fa6c65c")
 	(paper "A4")
 	(title_block
-		(title "ABTRS Torso Board - 1.65 V reference (VREF)")
-		(date "2026-11-16")
+		(title "ABTRS Torso Board")
+		(date "2026-11-18")
 		(rev "0.1")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
@@ -1764,7 +1764,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL "
+		(property "MPN" "RC0603FR-07100KL"
 			(at 132.08 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2102,7 +2102,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL "
+		(property "MPN" "RC0603FR-07100KL"
 			(at 132.08 114.3 0)
 			(hide yes)
 			(show_name no)

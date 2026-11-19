@@ -5,8 +5,8 @@
 	(uuid "802305d9-c304-5124-99b5-e80f05058b56")
 	(paper "A4")
 	(title_block
-		(title "ABTRS Torso Board - Breathing-band front end (used twice: CHEST, ABD)")
-		(date "2026-11-16")
+		(title "ABTRS Torso Board")
+		(date "2026-11-18")
 		(rev "0.1")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
@@ -2212,7 +2212,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL10B334KO8NNNC "
+		(property "MPN" "CL10B334KO8NNNC"
 			(at 158.75 123.19 90)
 			(hide yes)
 			(show_name no)
@@ -3235,7 +3235,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL "
+		(property "MPN" "RC0603FR-07100KL"
 			(at 158.75 114.3 90)
 			(hide yes)
 			(show_name no)
