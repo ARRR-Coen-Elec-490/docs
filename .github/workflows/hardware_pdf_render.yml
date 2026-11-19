@@ -11,13 +11,14 @@ on:
 
 permissions:
     contents: write
+    pull-requests: write
 
 jobs:
     render-pcb-schematics:
         name: Compile KiCAD to PDF
         runs-on: ubuntu-latest
         container:
-          image: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+          image: ghcr.io/inti-cmnb/kicad10_auto_full:latest
         steps:
           # STEP 1: Pull the latest code, including any Git LSF Assets
           - name: Checkout Code Base
@@ -27,6 +28,8 @@ jobs:
 
           # STEP 2: Run KiCAD CLI to generate printables for your working files
           - name: Export Vector Schematics
+            env:
+              HOME: /tmp
             run: |
               mkdir -p hardware-documentation/schematics
               find hardware-documentation -name '*.kicad_pro' | while read -r pro; do
@@ -35,6 +38,7 @@ jobs:
                 sch="$dir/$base.kicad_sch"
                 pcb="$dir/$base.kicad_pcb"
 
+                echo "Found project: $pro"
                 if [ -f "$sch" ]; then
                   kicad-cli sch export pdf "$sch" -o "$GITHUB_WORKSPACE/hardware-documentation/schematics/${base}_schematic.pdf"
                 fi
