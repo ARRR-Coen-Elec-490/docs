@@ -45,8 +45,8 @@ jobs:
                 if [ -f "$pcb" ]; then
                   kicad-cli pcb export pdf "$pcb" \
                     -o "$GITHUB_WORKSPACE/hardware-documentation/schematics/${base}_pcb.pdf" \
-                    --layers "F.Cu,B.Cu,F.Silkscreen,B.Silkscreen,Edge.Cuts" \
-                    --page-size-mode 2
+                    --layers "F.Cu,B.Cu,F.SilkS,B.SilkS,Edge.Cuts" \
+                    --scale 2.5
                 fi
               done
 
