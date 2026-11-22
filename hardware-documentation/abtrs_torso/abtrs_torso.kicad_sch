@@ -3,17 +3,17 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "a35961d5-6f6d-5ea4-8bae-96f4e4aa2eb2")
-	(paper "A4")
+	(paper "USLetter")
 	(title_block
 		(title "ABTRS Torso Board")
-		(date "2026-11-18")
-		(rev "0.1")
+		(date "2026-11-21")
+		(rev "0.2")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
 	(lib_symbols)
 	(wire
 		(pts
-			(xy 71.12 142.24) (xy 152.4 142.24)
+			(xy 104.14 146.05) (xy 185.42 146.05)
 		)
 		(stroke
 			(width 0)
@@ -23,7 +23,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 111.76) (xy 152.4 111.76)
+			(xy 104.14 115.57) (xy 185.42 115.57)
 		)
 		(stroke
 			(width 0)
@@ -33,7 +33,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 147.32) (xy 152.4 147.32)
+			(xy 104.14 151.13) (xy 185.42 151.13)
 		)
 		(stroke
 			(width 0)
@@ -43,7 +43,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 40.64) (xy 81.28 40.64)
+			(xy 104.14 44.45) (xy 114.3 44.45)
 		)
 		(stroke
 			(width 0)
@@ -53,7 +53,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 152.4) (xy 152.4 152.4)
+			(xy 104.14 156.21) (xy 185.42 156.21)
 		)
 		(stroke
 			(width 0)
@@ -63,7 +63,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 63.5) (xy 152.4 63.5)
+			(xy 104.14 67.31) (xy 185.42 67.31)
 		)
 		(stroke
 			(width 0)
@@ -73,7 +73,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 132.08) (xy 152.4 132.08)
+			(xy 104.14 135.89) (xy 185.42 135.89)
 		)
 		(stroke
 			(width 0)
@@ -83,7 +83,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 91.44) (xy 152.4 91.44)
+			(xy 104.14 95.25) (xy 185.42 95.25)
 		)
 		(stroke
 			(width 0)
@@ -93,7 +93,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 68.58) (xy 81.28 68.58)
+			(xy 104.14 72.39) (xy 114.3 72.39)
 		)
 		(stroke
 			(width 0)
@@ -103,7 +103,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 137.16) (xy 152.4 137.16)
+			(xy 104.14 140.97) (xy 185.42 140.97)
 		)
 		(stroke
 			(width 0)
@@ -113,7 +113,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 35.56) (xy 152.4 35.56)
+			(xy 104.14 39.37) (xy 185.42 39.37)
 		)
 		(stroke
 			(width 0)
@@ -122,7 +122,7 @@
 		(uuid "fdffd994-d440-5f9f-9e16-f915d7e929a4")
 	)
 	(label "I2C_SDA"
-		(at 81.28 132.08 0)
+		(at 114.3 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -132,7 +132,7 @@
 		(uuid "1aea5c18-93f3-5f28-9717-0dbb6b9c2449")
 	)
 	(label "VREF"
-		(at 81.28 91.44 0)
+		(at 114.3 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -142,7 +142,7 @@
 		(uuid "240b4a7b-3e26-5169-bde3-3354ef77176e")
 	)
 	(label "VREF"
-		(at 81.28 40.64 0)
+		(at 114.3 44.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -152,7 +152,7 @@
 		(uuid "2a0322ca-cef7-5bf4-b089-92361ab981a7")
 	)
 	(label "ABD_ADC"
-		(at 81.28 63.5 0)
+		(at 114.3 67.31 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -162,7 +162,7 @@
 		(uuid "577127be-12ab-5bce-bb8d-a7865b70f7e8")
 	)
 	(label "BODY_TEMP_OS"
-		(at 81.28 147.32 0)
+		(at 114.3 151.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -172,7 +172,7 @@
 		(uuid "7d34a270-9356-5df2-9f22-61a28dcea967")
 	)
 	(label "VREF"
-		(at 81.28 68.58 0)
+		(at 114.3 72.39 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -182,7 +182,7 @@
 		(uuid "828d8907-a533-52fa-b1da-136e90209e53")
 	)
 	(label "CHEST_ADC"
-		(at 81.28 35.56 0)
+		(at 114.3 39.37 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -192,7 +192,7 @@
 		(uuid "87630d63-0ca8-5d43-bb89-54b4cc60c2c0")
 	)
 	(label "I2C_SCL"
-		(at 81.28 137.16 0)
+		(at 114.3 140.97 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -202,7 +202,7 @@
 		(uuid "9396d682-7b30-5406-8b3d-fdc4cb062a6c")
 	)
 	(label "PPG_INT"
-		(at 81.28 152.4 0)
+		(at 114.3 156.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -212,7 +212,7 @@
 		(uuid "af0525fb-ab13-5f2b-90d6-75852a2b6cba")
 	)
 	(label "VBAT"
-		(at 81.28 111.76 0)
+		(at 114.3 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -222,7 +222,7 @@
 		(uuid "c89ef941-3454-5a0c-a7c2-728c5e52dfb7")
 	)
 	(label "PCB_TEMP_ALERT"
-		(at 81.28 142.24 0)
+		(at 114.3 146.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -232,7 +232,7 @@
 		(uuid "caac2aec-49cb-5306-a480-a52d0167e4d0")
 	)
 	(sheet
-		(at 25.4 127)
+		(at 58.42 130.81)
 		(size 45.72 30.48)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -248,7 +248,7 @@
 		)
 		(uuid "08491533-31ea-525e-b376-a2c31c38836c")
 		(property "Sheetname" "SENSORS"
-			(at 25.4 126.2884 0)
+			(at 58.42 130.0984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -259,7 +259,7 @@
 			)
 		)
 		(property "Sheetfile" "sensors_i2c.kicad_sch"
-			(at 25.4 158.0646 0)
+			(at 58.42 161.8746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -270,7 +270,7 @@
 			)
 		)
 		(pin "I2C_SDA" bidirectional
-			(at 71.12 132.08 0)
+			(at 104.14 135.89 0)
 			(uuid "8aa1c6d0-9ba2-5efa-9919-149243f78af2")
 			(effects
 				(font
@@ -280,7 +280,7 @@
 			)
 		)
 		(pin "I2C_SCL" bidirectional
-			(at 71.12 137.16 0)
+			(at 104.14 140.97 0)
 			(uuid "10c7c538-ada8-50be-a738-b6831652779c")
 			(effects
 				(font
@@ -290,7 +290,7 @@
 			)
 		)
 		(pin "PCB_TEMP_ALERT" output
-			(at 71.12 142.24 0)
+			(at 104.14 146.05 0)
 			(uuid "3a0d607c-4303-5b10-8525-46f59ec3a9df")
 			(effects
 				(font
@@ -300,7 +300,7 @@
 			)
 		)
 		(pin "BODY_TEMP_OS" output
-			(at 71.12 147.32 0)
+			(at 104.14 151.13 0)
 			(uuid "3670bff4-110f-566a-8f27-74bfe1166951")
 			(effects
 				(font
@@ -310,7 +310,7 @@
 			)
 		)
 		(pin "PPG_INT" output
-			(at 71.12 152.4 0)
+			(at 104.14 156.21 0)
 			(uuid "5a9017b9-0158-5223-b335-115dc27ace72")
 			(effects
 				(font
@@ -328,7 +328,7 @@
 		)
 	)
 	(sheet
-		(at 25.4 58.42)
+		(at 58.42 62.23)
 		(size 45.72 15.24)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -344,7 +344,7 @@
 		)
 		(uuid "2a8ef166-b837-51b9-8f9c-961e1ea7692a")
 		(property "Sheetname" "ABD"
-			(at 25.4 57.7084 0)
+			(at 58.42 61.5184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -355,7 +355,7 @@
 			)
 		)
 		(property "Sheetfile" "breathing_afe.kicad_sch"
-			(at 25.4 74.2446 0)
+			(at 58.42 78.0546 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -366,7 +366,7 @@
 			)
 		)
 		(pin "ADC_OUT" output
-			(at 71.12 63.5 0)
+			(at 104.14 67.31 0)
 			(uuid "7aeeda01-aebd-58a5-ac28-b2106e61be3b")
 			(effects
 				(font
@@ -376,7 +376,7 @@
 			)
 		)
 		(pin "VREF" input
-			(at 71.12 68.58 0)
+			(at 104.14 72.39 0)
 			(uuid "70dd25e5-6d5a-5cf5-9ce7-6ebc3f9c674c")
 			(effects
 				(font
@@ -394,7 +394,7 @@
 		)
 	)
 	(sheet
-		(at 152.4 30.48)
+		(at 185.42 34.29)
 		(size 45.72 127)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -410,7 +410,7 @@
 		)
 		(uuid "49e24adb-5db3-56f1-b52b-e6aea3b5267b")
 		(property "Sheetname" "MCU"
-			(at 152.4 29.7684 0)
+			(at 185.42 33.5784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -421,7 +421,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 152.4 158.0646 0)
+			(at 185.42 161.8746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -432,7 +432,7 @@
 			)
 		)
 		(pin "CHEST_ADC" input
-			(at 152.4 35.56 180)
+			(at 185.42 39.37 180)
 			(uuid "9f125d2e-d473-5a00-baf7-55dd789a8e6a")
 			(effects
 				(font
@@ -442,7 +442,7 @@
 			)
 		)
 		(pin "ABD_ADC" input
-			(at 152.4 63.5 180)
+			(at 185.42 67.31 180)
 			(uuid "3d18e15c-5ccd-5e10-be6d-13749c448e40")
 			(effects
 				(font
@@ -452,7 +452,7 @@
 			)
 		)
 		(pin "VREF_MON" input
-			(at 152.4 91.44 180)
+			(at 185.42 95.25 180)
 			(uuid "bed49811-5f9b-5ac0-b3b3-d25a8b9e6315")
 			(effects
 				(font
@@ -462,7 +462,7 @@
 			)
 		)
 		(pin "VBAT" bidirectional
-			(at 152.4 111.76 180)
+			(at 185.42 115.57 180)
 			(uuid "435afe6b-7e6e-5ea4-afbe-55750b34ab07")
 			(effects
 				(font
@@ -472,7 +472,7 @@
 			)
 		)
 		(pin "I2C_SDA" bidirectional
-			(at 152.4 132.08 180)
+			(at 185.42 135.89 180)
 			(uuid "098f161f-17fc-5bfb-9366-3c2f7c287812")
 			(effects
 				(font
@@ -482,7 +482,7 @@
 			)
 		)
 		(pin "I2C_SCL" bidirectional
-			(at 152.4 137.16 180)
+			(at 185.42 140.97 180)
 			(uuid "4cf65c34-6bb9-5444-bb98-9eb2caeac7b4")
 			(effects
 				(font
@@ -492,7 +492,7 @@
 			)
 		)
 		(pin "PCB_TEMP_ALERT" input
-			(at 152.4 142.24 180)
+			(at 185.42 146.05 180)
 			(uuid "af4ab713-c173-5c9e-ac3f-ad1bbd6dcd28")
 			(effects
 				(font
@@ -502,7 +502,7 @@
 			)
 		)
 		(pin "BODY_TEMP_OS" input
-			(at 152.4 147.32 180)
+			(at 185.42 151.13 180)
 			(uuid "5348a3bf-c13d-5daf-b8d1-6233bfbce55e")
 			(effects
 				(font
@@ -512,7 +512,7 @@
 			)
 		)
 		(pin "PPG_INT" input
-			(at 152.4 152.4 180)
+			(at 185.42 156.21 180)
 			(uuid "8305e659-c0d3-52b3-b66f-072ff5b877af")
 			(effects
 				(font
@@ -530,7 +530,7 @@
 		)
 	)
 	(sheet
-		(at 25.4 86.36)
+		(at 58.42 90.17)
 		(size 45.72 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -546,7 +546,7 @@
 		)
 		(uuid "aedc4532-6dbd-5c81-be4a-ca59f048620e")
 		(property "Sheetname" "VREF_GEN"
-			(at 25.4 85.6484 0)
+			(at 58.42 89.4584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -557,7 +557,7 @@
 			)
 		)
 		(property "Sheetfile" "analog_ref.kicad_sch"
-			(at 25.4 97.1046 0)
+			(at 58.42 100.9146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -568,7 +568,7 @@
 			)
 		)
 		(pin "VREF" output
-			(at 71.12 91.44 0)
+			(at 104.14 95.25 0)
 			(uuid "2ea7cd5a-2715-5aea-9833-ec579e09c0e8")
 			(effects
 				(font
@@ -586,7 +586,7 @@
 		)
 	)
 	(sheet
-		(at 25.4 106.68)
+		(at 58.42 110.49)
 		(size 45.72 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -602,7 +602,7 @@
 		)
 		(uuid "b1964025-44fb-5ba9-99eb-1e407ddba7bd")
 		(property "Sheetname" "POWER"
-			(at 25.4 105.9684 0)
+			(at 58.42 109.7784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -613,7 +613,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 25.4 117.4246 0)
+			(at 58.42 121.2346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -624,7 +624,7 @@
 			)
 		)
 		(pin "VBAT" bidirectional
-			(at 71.12 111.76 0)
+			(at 104.14 115.57 0)
 			(uuid "84e1f1fa-4abc-5c76-b460-c7de467a3269")
 			(effects
 				(font
@@ -642,7 +642,7 @@
 		)
 	)
 	(sheet
-		(at 25.4 30.48)
+		(at 58.42 34.29)
 		(size 45.72 15.24)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -658,7 +658,7 @@
 		)
 		(uuid "ede6a40c-76a8-5469-a6a6-c45c806d8b23")
 		(property "Sheetname" "CHEST"
-			(at 25.4 29.7684 0)
+			(at 58.42 33.5784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -669,7 +669,7 @@
 			)
 		)
 		(property "Sheetfile" "breathing_afe.kicad_sch"
-			(at 25.4 46.3046 0)
+			(at 58.42 50.1146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -680,7 +680,7 @@
 			)
 		)
 		(pin "ADC_OUT" output
-			(at 71.12 35.56 0)
+			(at 104.14 39.37 0)
 			(uuid "4cc9b83f-5756-5ac1-a871-ca7727eccc40")
 			(effects
 				(font
@@ -690,7 +690,7 @@
 			)
 		)
 		(pin "VREF" input
-			(at 71.12 40.64 0)
+			(at 104.14 44.45 0)
 			(uuid "3b649780-3c6c-5963-a389-4e7d075d36bb")
 			(effects
 				(font
