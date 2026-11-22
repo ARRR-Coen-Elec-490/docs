@@ -46,6 +46,7 @@ jobs:
                   p1="/tmp/${base}_p1_front.pdf"
                   p2="/tmp/${base}_p2_back.pdf"
                   p3="/tmp/${base}_p3_labels.pdf"
+                  p4="/tmp/${base}_p4_fab.pdf"
                   out_pdf="$GITHUB_WORKSPACE/hardware-documentation/schematics/${base}_pcb.pdf"
 
                   # Page 1: Red Front Copper Layer + Silkscreen + Title Block
@@ -53,6 +54,7 @@ jobs:
                     -o "$p1" \
                     --layers "F.Cu,F.SilkS,Edge.Cuts" \
                     --include-border-title \
+                    --page-size-mode 1 \
                     --scale 2.5
 
                   # Page 2: Blue Back Copper Layer + Silkscreen (Mirrored) + Title Block
@@ -61,18 +63,29 @@ jobs:
                     --layers "B.Cu,B.SilkS,Edge.Cuts" \
                     --mirror \
                     --include-border-title \
+                    --page-size-mode 1 \
                     --scale 2.5
 
                   # Page 3: Pure Black & White Labels + Component Outlines + Title Block
                   kicad-cli pcb export pdf "$pcb" \
                     -o "$p3" \
-                    --layers "F.SilkS,F.Fab,Edge.Cuts" \
+                    --layers "F.SilkS,Edge.Cuts" \
                     --black-and-white \
                     --include-border-title \
+                    --page-size-mode 1 \
                     --scale 2.5
 
-                  # Merge the 3 pages into one PDF
-                  pdfunite "$p1" "$p2" "$p3" "$out_pdf"
+                  # Page 4: Pure Black & White Fab Information
+                  kicad-cli pcb export pdf "$pcb" \
+                    -o "$p4" \
+                    --layers "F.Fab,Edge.Cuts" \
+                    --black-and-white \
+                    --include-border-title \
+                    --page-size-mode 1 \
+                    --scale 2.5
+
+                  # Merge the 4 pages into one PDF
+                  pdfunite "$p1" "$p2" "$p3" "$p4" "$out_pdf"
                 fi
               done
 
