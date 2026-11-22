@@ -20,11 +20,11 @@ The second class of inputs are the "System Inputs", and are represented with the
 
 ### 3.2 Outputs
 
-The outputs of the system are generally easier to classify, as they are all produced via the mobile companion application.  All the outputs are represented by the colour <span style="color: orange;">orange</span>.  The outputs are made up of audio and visual cues to help the user during their post-exercise recovery session.  Both options were chosen, so as to ensure accessibility for the product.  Finally, the live charting will also allow the user to stay informed on other aspects of their breathing, such as their heart rate and blood-oxygen level, among others.
+The outputs of the system are generally easier to classify, as they are all produced via the mobile companion application.  All the outputs are represented by the colour <span style="color: orange;">orange</span>.  The outputs are made up of audio and visual cues to help the user during their post-exercise recovery session.  Both options were chosen, so as to maximize accessibility for the product.  Finally, the live charting will also allow the user to stay informed on other aspects of their breathing, such as their heart rate and blood-oxygen level, among others.
 
 ### 3.3 Internal Process
 
-The internal process of the system  can be divided into four main layers, namely the "Embedded MCU", "Mobile Application", "Cloud Services", and "Machine Learning" layers.  All four layers are represented by the colour <span style="color: purple;">purple</span>.  More details related to the interaction between these layers, their roles, and their sub-architetures, will be communicated through other software documents, including the White-Box System Architecture Diagram.
+The internal process of the system  can be divided into four main layers, namely the "Embedded MCU", "Mobile Application", "Data Transfer", and "Machine Learning" layers.  All four layers are represented as sub-processes of the over-arching system process, by the colour <span style="color: purple;">purple</span>.  More details related to the interaction between these layers, their roles, and their sub-architetures, will be communicated through other software documents, including the White-Box System Architecture Diagram.
 
 ### 3.4 Environment
 
