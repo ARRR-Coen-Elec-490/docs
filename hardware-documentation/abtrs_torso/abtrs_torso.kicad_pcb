@@ -686,7 +686,7 @@
 			(uuid "55c036d6-f82b-480d-84da-c7e82c2090ee")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPDT_CK_JS102011SAQN.step"
+		(model "${KIPRJMOD}/3dmodels/JS102011SAQN.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -694,7 +694,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)

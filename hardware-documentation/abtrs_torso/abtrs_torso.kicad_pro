@@ -550,7 +550,7 @@
       "netlist": "",
       "plot": "fab/gerbers/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "outputs/abtrs_torso.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
