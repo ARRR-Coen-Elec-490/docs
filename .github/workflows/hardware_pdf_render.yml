@@ -54,7 +54,6 @@ jobs:
                     -o "$p1" \
                     --layers "F.Cu,F.SilkS,Edge.Cuts" \
                     --include-border-title \
-                    --page-size-mode 1 \
                     --scale 2.5
 
                   # Page 2: Blue Back Copper Layer + Silkscreen (Mirrored) + Title Block
@@ -63,7 +62,6 @@ jobs:
                     --layers "B.Cu,B.SilkS,Edge.Cuts" \
                     --mirror \
                     --include-border-title \
-                    --page-size-mode 1 \
                     --scale 2.5
 
                   # Page 3: Pure Black & White Labels + Component Outlines + Title Block
@@ -72,7 +70,6 @@ jobs:
                     --layers "F.SilkS,Edge.Cuts" \
                     --black-and-white \
                     --include-border-title \
-                    --page-size-mode 1 \
                     --scale 2.5
 
                   # Page 4: Pure Black & White Fab Information
@@ -81,7 +78,6 @@ jobs:
                     --layers "F.Fab,Edge.Cuts" \
                     --black-and-white \
                     --include-border-title \
-                    --page-size-mode 1 \
                     --scale 2.5
 
                   # Merge the 4 pages into one PDF
