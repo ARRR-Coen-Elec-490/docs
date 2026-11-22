@@ -12,15 +12,7 @@ This file will contain a detailed white box diagram for the ABTRS System Archite
 
 ## 3. Explanation
 
-<div align="center">
-    <img src="./assets/layered-architecture.png" alt="Hardware Layer">
-</div>
-
-<br>
-
-As seen in the image above, the system being developed for this project contains several interconnecting, and, at times, overlapping layers.  While this diagram is rudimentary, it provides a digestable portrayal of the different levels of abstracion contained within the ABTRS system.  In the sections below, each layer is explored in more detail.
-
-<br>
+The system being developed for this project contains several interconnecting, and, at times, overlapping layers.  While this diagram above is simplified, it provides a digestable portrayal of the different levels of abstracion contained within the ABTRS system.  In the sections below, each layer is explored in more detail.
 
 ### 3.1 Hardware Layer
 
@@ -46,10 +38,10 @@ The image above provides an expanded view of the ambedded microcontroller layer,
 
 <br>
 
-### 3.3 BLE Layer
+### 3.3 Data Transfer Layer
 
 <div align="center">
-    <img src="./assets/ble-layer.png" alt="BLE Layer">
+    <img src="./assets/data-transfer-layer.png" alt="Data Transfer Layer">
 </div>
 
 <br>
@@ -81,19 +73,7 @@ Finally, in terms of inter-session activity, the user will be able to view a lon
 
 <br>
 
-### 3.5 Cloud Services Layer
-
-<div align="center">
-    <img src="./assets/cloud-layer.png" alt="Cloud Services Layer">
-</div>
-
-<br>
-
-The image above provides an expanded view of the different servers hosted by the cloud layer, called the *Cloud Services Layer*.  The first of the three services is the Reinforcement Learning Model hosted by an Azure Cloud Space.  This is where the model's policy and reward functions will be trained tested, and updated, before ultimately being sent to the mobile application for use.  The second service is the MongoDB Atlas NoSQL database, which will serve as the long-term storage solution for our users' data.  At the end of a given session, the contents of the mobile application's temporary storage will be pushed to the MongoDB database.  After this has been completed, this service will send the Azure service a signal to trigger its update operations.  The final service contained within this layer is a Prometheus Time-Series database, which will be used to monitor the health of the other two services.  In the event of a service disruption, appropriate action must be taken to mitigate further errors and replace erroneous data by repeating the interrupted post-session operations.
-
-<br>
-
-### 3.6 Machine Learning Layer
+### 3.5 Machine Learning Layer
 
 <div align="center">
     <img src="./assets/ml-layer.png" alt="Machine Learning Layer">
