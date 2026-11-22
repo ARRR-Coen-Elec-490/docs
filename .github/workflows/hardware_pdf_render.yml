@@ -52,7 +52,7 @@ jobs:
                   # Page 1: Red Front Copper Layer + Silkscreen + Title Block
                   kicad-cli pcb export pdf "$pcb" \
                     -o "$p1" \
-                    --layers "F.Cu,F.SilkS,Edge.Cuts" \
+                    --layers "F.Cu,F.SilkS,F.Courtyard,Dwgs.User,Cmts.User,Edge.Cuts" \
                     --include-border-title \
                     --scale 2.5
 
@@ -67,7 +67,7 @@ jobs:
                   # Page 3: Pure Black & White Labels + Component Outlines + Title Block
                   kicad-cli pcb export pdf "$pcb" \
                     -o "$p3" \
-                    --layers "F.SilkS,Edge.Cuts" \
+                    --layers "F.SilkS,F.Courtyard,Dwgs.User,Cmts.User,Edge.Cuts" \
                     --black-and-white \
                     --include-border-title \
                     --scale 2.5
@@ -75,7 +75,7 @@ jobs:
                   # Page 4: Pure Black & White Fab Information
                   kicad-cli pcb export pdf "$pcb" \
                     -o "$p4" \
-                    --layers "F.Fab,Edge.Cuts" \
+                    --layers "F.Fab,Dwgs.User,Cmts.User,Edge.Cuts" \
                     --black-and-white \
                     --include-border-title \
                     --scale 2.5
