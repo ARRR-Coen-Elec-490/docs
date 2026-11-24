@@ -3413,7 +3413,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal"
 			(at 67.31 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -3446,7 +3446,7 @@
 				)
 			)
 		)
-		(property "MPN" "B2B-PH-K-S"
+		(property "MPN" "S2B-PH-K-S"
 			(at 67.31 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -3479,7 +3479,7 @@
 				)
 			)
 		)
-		(property "Supplier P/N" "455-1704-ND"
+		(property "Supplier P/N" "455-1719-ND"
 			(at 67.31 96.52 0)
 			(hide yes)
 			(show_name no)
