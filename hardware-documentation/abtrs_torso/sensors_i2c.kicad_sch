@@ -3433,7 +3433,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal"
 			(at 153.67 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -3466,7 +3466,7 @@
 				)
 			)
 		)
-		(property "MPN" "B5B-PH-K-S"
+		(property "MPN" "S5B-PH-K-S"
 			(at 153.67 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -3499,7 +3499,7 @@
 				)
 			)
 		)
-		(property "Supplier P/N" "455-1707-ND"
+		(property "Supplier P/N" "455-1722-ND"
 			(at 153.67 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -3567,7 +3567,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal"
 			(at 87.63 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -3600,7 +3600,7 @@
 				)
 			)
 		)
-		(property "MPN" "B5B-PH-K-S"
+		(property "MPN" "S5B-PH-K-S"
 			(at 87.63 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -3633,7 +3633,7 @@
 				)
 			)
 		)
-		(property "Supplier P/N" "455-1707-ND"
+		(property "Supplier P/N" "455-1722-ND"
 			(at 87.63 137.16 0)
 			(hide yes)
 			(show_name no)
