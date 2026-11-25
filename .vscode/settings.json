@@ -5,5 +5,7 @@
     "files.trimTrailingWhitespace": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.markdownlint": "explicit"
-    }
+    },
+    "markdown.extension.list.indentationSize": "inherit",
+    "editor.tabSize": 4
 }
