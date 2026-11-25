@@ -1934,7 +1934,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "258f7bbc-89bb-4285-8833-fb8ab0a74a4e")
 		(property "Reference" "V3"
 			(at 129.54 147.1901 0)
@@ -1947,7 +1946,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "dc=1.65"
+		(property "Value" ""
 			(at 129.54 149.7301 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2023,6 +2022,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Sim.Params" "dc=1.65"
+			(at 132.588 150.368 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -4057,7 +4066,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f197efe6-b15d-47f9-8af9-7ff6827b91ea")
 		(property "Reference" "V2"
 			(at 106.68 148.4601 0)
@@ -4070,7 +4078,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "dc=3.3"
+		(property "Value" ""
 			(at 106.68 151.0001 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4146,6 +4154,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Sim.Params" "dc=3.3"
+			(at 108.712 151.892 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
