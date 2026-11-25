@@ -7,6 +7,7 @@ on:
             - "hardware-documentation/**/*.kicad_sch"
             - "hardware-documentation/**/*.kicad_pcb"
             - "hardware-documentation/**/*.kicad_pro"
+            - "!**/simulation/**"
     workflow_dispatch:
 
 permissions:
@@ -32,7 +33,7 @@ jobs:
               HOME: /tmp
             run: |
               mkdir -p hardware-documentation/schematics
-              find hardware-documentation -name '*.kicad_pro' | while read -r pro; do
+              find hardware-documentation -not -path '*/simulation/*' -name '*.kicad_pro' | while read -r pro; do
                 dir=$(dirname "$pro")
                 base=$(basename "$pro" .kicad_pro)
                 sch="$dir/$base.kicad_sch"
@@ -52,14 +53,14 @@ jobs:
                   # Page 1: Red Front Copper Layer + Silkscreen + Title Block
                   kicad-cli pcb export pdf "$pcb" \
                     -o "$p1" \
-                    --layers "F.Cu,F.SilkS,F.Courtyard,Dwgs.User,Cmts.User,Edge.Cuts" \
+                    --layers "F.Cu,Edge.Cuts" \
                     --include-border-title \
                     --scale 2.5
 
                   # Page 2: Blue Back Copper Layer + Silkscreen (Mirrored) + Title Block
                   kicad-cli pcb export pdf "$pcb" \
                     -o "$p2" \
-                    --layers "B.Cu,B.SilkS,Edge.Cuts" \
+                    --layers "B.Cu,Edge.Cuts" \
                     --mirror \
                     --include-border-title \
                     --scale 2.5
