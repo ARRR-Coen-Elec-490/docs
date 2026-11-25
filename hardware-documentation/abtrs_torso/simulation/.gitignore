@@ -1,0 +1,4 @@
+MCP6001.lib
+*.lck
+.history/
+*.kicad_prl

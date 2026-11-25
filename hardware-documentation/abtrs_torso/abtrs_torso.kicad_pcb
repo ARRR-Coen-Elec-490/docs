@@ -9,8 +9,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "ABTRS Torso Board")
-		(date "2026-11-21")
-		(rev "0.2")
+		(date "2026-11-24")
+		(rev "0.3")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
 	(layers
@@ -145,7 +145,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -160,7 +160,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse-c-k-slide-js-series-datasheet?assetguid=aba42b08-0d2c-423b-813d-a2faa5a3bb14"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -710,7 +710,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -920,7 +920,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1373,7 +1373,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1583,7 +1583,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1915,7 +1915,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2125,7 +2125,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2335,7 +2335,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2983,7 +2983,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3193,7 +3193,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3403,7 +3403,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3613,7 +3613,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3823,7 +3823,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4155,7 +4155,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4365,7 +4365,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4575,7 +4575,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4737,7 +4737,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4947,7 +4947,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5157,7 +5157,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5610,7 +5610,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5820,7 +5820,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6030,7 +6030,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6466,7 +6466,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6676,7 +6676,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -6886,7 +6886,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7282,7 +7282,7 @@
 			(effects
 				(font
 					(size 0.8 0.6)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7492,7 +7492,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7702,7 +7702,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8431,7 +8431,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8641,7 +8641,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8851,7 +8851,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9061,7 +9061,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9790,7 +9790,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10000,7 +10000,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10210,7 +10210,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10906,7 +10906,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11116,7 +11116,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11326,7 +11326,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -11534,7 +11534,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 				(justify left bottom)
 			)
@@ -12080,6 +12080,17 @@
 			(uuid "563a458b-6b32-4010-a21d-e101bbc2f302")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3dmodels/XIAO-nRF52840.step"
+			(offset
+				(xyz 15 8.75 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -90)
+			)
+		)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D1.5mm"
 		(layer "F.Cu")
@@ -12094,7 +12105,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12256,7 +12267,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -12680,7 +12691,7 @@
 			(effects
 				(font
 					(size 0.8 0.8)
-					(thickness 0.12)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13204,7 +13215,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Team 23 2026-11-18"
+	(gr_text "Team 23 ${ISSUE_DATE}"
 		(at 143.3625 111.55 0)
 		(layer "F.SilkS")
 		(uuid "e2021cc5-2fed-4de5-bd7e-e8010570b2ac")
@@ -13216,7 +13227,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "ABTRS Torso V0.1"
+	(gr_text "ABTRS Torso Rev ${REVISION}"
 		(at 144.3625 109.55 0)
 		(layer "F.SilkS")
 		(uuid "c8892001-1041-48db-9e74-0393716fc810")

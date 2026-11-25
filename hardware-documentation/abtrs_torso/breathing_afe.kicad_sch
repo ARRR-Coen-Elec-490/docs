@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "ABTRS Torso Board")
-		(date "2026-11-21")
-		(rev "0.2")
+		(date "2026-11-24")
+		(rev "0.3")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
 	(lib_symbols
