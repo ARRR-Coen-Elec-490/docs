@@ -1193,6 +1193,12 @@
 		(uuid "0dbadc65-73b9-4684-b5cd-2d8c4dee9000")
 	)
 	(junction
+		(at 200.66 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f9d03a7-d702-42ab-9178-46441253aba2")
+	)
+	(junction
 		(at 180.34 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1342,6 +1348,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 106.68) (xy 213.36 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44107656-f68c-4a3e-88f9-473a8cd7e103")
+	)
+	(wire
+		(pts
 			(xy 125.73 133.35) (xy 147.32 133.35)
 		)
 		(stroke
@@ -1402,7 +1418,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 93.98) (xy 204.47 93.98)
+			(xy 199.39 93.98) (xy 200.66 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1502,6 +1518,26 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 96.52) (xy 200.66 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb8fa7ac-4d63-44e5-acda-aa30a640c013")
+	)
+	(wire
+		(pts
+			(xy 213.36 99.06) (xy 213.36 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcac358e-5cc8-4570-bae6-60b105aabe76")
+	)
+	(wire
+		(pts
 			(xy 158.75 96.52) (xy 147.32 96.52)
 		)
 		(stroke
@@ -1509,6 +1545,16 @@
 			(type default)
 		)
 		(uuid "be59b148-d656-4f1f-bfe9-a36b61dbc295")
+	)
+	(wire
+		(pts
+			(xy 200.66 96.52) (xy 200.66 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c44e61b5-2a18-41b5-89b9-63ce9cbfed28")
 	)
 	(wire
 		(pts
@@ -1559,6 +1605,16 @@
 			(type default)
 		)
 		(uuid "e388d7d1-e437-4abe-89b7-72130d6089da")
+	)
+	(wire
+		(pts
+			(xy 200.66 93.98) (xy 204.47 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4aee95b-51b6-4323-9bca-107d0a532f85")
 	)
 	(wire
 		(pts
@@ -3731,6 +3787,88 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 213.36 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "956ad68b-c61e-4b14-a08f-048774cb3440")
+		(property "Reference" "R_ADC"
+			(at 215.9 101.5999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1M"
+			(at 215.9 104.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 211.582 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67835701-1850-4df8-b3d6-10e4d2c6073f")
+		)
+		(pin "2"
+			(uuid "8411da2a-2dc4-4bbf-a416-4f068373c149")
+		)
+		(instances
+			(project "afe_sim"
+				(path "/ca51ea7c-9837-4559-baf1-8074a563ab0b"
+					(reference "R_ADC")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 163.83 115.57 90)
 		(unit 1)
 		(body_style 1)
@@ -3973,6 +4111,84 @@
 			(project "afe_sim"
 				(path "/ca51ea7c-9837-4559-baf1-8074a563ab0b"
 					(reference "C204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 213.36 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e28fa256-2d52-49d3-b842-0688ffa930bf")
+		(property "Reference" "#PWR05"
+			(at 213.36 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 213.36 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 213.36 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 213.36 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "96beeda2-8133-4dcc-9e77-e8cfb0fb8efa")
+		)
+		(instances
+			(project "afe_sim"
+				(path "/ca51ea7c-9837-4559-baf1-8074a563ab0b"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
