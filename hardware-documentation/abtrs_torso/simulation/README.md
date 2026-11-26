@@ -21,5 +21,6 @@ MCP6001.lib is not in the repo because Microchip's licence doesn't allow us to r
 - Cord resistance at 10x or 0.1x nominal: the output stays centred, but the signal is about 3x smaller (+/-29 mV).
 - Power-on (V2 and V3 start at 0 V, 60 s): with the cord near 2.2k the signal is usable after ~1 s and centred after ~20 s. With the cord at 10x, the output sits at the 3.3 V rail for ~22 s and is centred after ~50 s. Firmware should ignore the first 30 s.
   To re-run it, set V2 and V3 to Pulse: y1=0, y2=3.3 (V3: 1.65), td=10m, tr=1m (V3: 250m), tf=1m, tw=1000, per=2000.
+- ADC load: a 1 MΩ resistor on ADC_OUT models the worst-case nRF52840 ADC input. Gain from node S drops from 20.8 dB to about 20.5 dB (about 3%), with no change to the corners.
 
-The operating point output is in afe_op_results.txt. The plots are afe_bode.png, afe_tran_1pct.png, afe_tran_5pct.png, afe_tran_cord10x.png, afe_tran_cord0p1x.png, afe_tran_poweron.png and afe_tran_poweron_cord10x.png.
+The operating point output is in afe_op_results.txt. The plots are afe_bode.png, afe_tran_1pct.png, afe_tran_5pct.png, afe_tran_cord10x.png, afe_tran_cord0p1x.png, afe_tran_poweron.png, afe_tran_poweron_cord10x.png and afe_bode_adcload.png.
