@@ -60,7 +60,7 @@ The "Create Session Context" sub-process describes the creation of a given post-
 
 <br>
 
-The "System-Cleanup" sub-process flowchart describes the very end of the system operation for a given post-exercise recovery session.  Once the mobile application creates and transmits the "End Session" signal, the user will be returned to the homescreen, where they have the option of either starting another session, vieweing a post-session (*OR inter-session*) dashboard, or changing settings, among other actions.  On the embedded side, once the signal is transmitted, the microcontroller must take steps to terminate its different processes, trash unused data, and ultimately enter a dormant cycle.  Finally, the user has the option to turn the system off, depending on whether or not he user must charge the system.
+The "System-Cleanup" sub-process flowchart describes the very end of the system operation for a given post-exercise recovery session.  Once the mobile application creates and transmits the "End Session" signal, the user will be returned to the homescreen, where they have the option of either starting another session, viewing a post-session (*OR inter-session*) dashboard, or changing settings, among other actions.  On the embedded side, once the signal is transmitted, the microcontroller must take steps to terminate its different processes, trash unused data, and ultimately enter a dormant cycle.  Finally, the user has the option to turn the system off, depending on whether or not he user must charge the system.
 
 ### 1.4 "Input Handling" Process
 
@@ -99,3 +99,17 @@ The "Output Handling" sub-process flowchart describes the creation of a *Session
 The "Post-Session Processing" sub-process flowchart describes the creation of the final UI prompt, once the session has been completed.  The final UI prompt is composed of a final display graphics, as well as a short audio indicator.  Once this UI prompt is displayed and projected, the final step of the sub-process will be to create signal to end the session, which will be passed to the [System-Cleanup](#13-system-cleanup-process) sub-process.
 
 ## 2. Operational Sequence Diagram
+
+### 2.1 Embedded Device - Mobile App Interaction Sequence
+
+The sequence diagram shows the two-way communication between the embedded device and the mobile application across the entire lifecycle of a monitoring session. A more detailed view of how the embedded device and mobile app communicate to check statuses (ex: battery), ensure proper configurations, and start and stopping sessions.
+
+<br>
+
+<div align="center">
+    <img src="./assets/system-architecture/assets/Sequence Diagram.drawio.png" alt="System Communication Sequence Diagram">
+</div>
+
+<br>
+
+### 2.2 Finite State Machine of the Device
