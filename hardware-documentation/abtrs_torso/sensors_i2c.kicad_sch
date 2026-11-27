@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "ABTRS Torso Board")
-		(date "2026-11-24")
-		(rev "0.3")
+		(date "2026-11-27")
+		(rev "0.4")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
 	(lib_symbols
@@ -1134,7 +1134,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "J602:SEN0518 (Gravity 4-pin): pin1 = +, pin2 = -, pin3 = D (SDA), pin4 = C (SCL).\nPin 5 (PPG_INT) not used. Module read by I2C polling (address 0x57)."
+	(text "J602: SEN0518 (Gravity 4-pin: p1 = SDA, p2 = SCL, p3 = GND, p4 = VCC) via adapter cable:\nJ602 p1 (VCC) -> SEN p4, p2 (GND) -> SEN p3, p3 (SDA) -> SEN p1, p4 (SCL) -> SEN p2.\np5 (PPG_INT) not connected: SEN0518 has no INT pin. Read by I2C polling (0x57)."
 		(exclude_from_sim no)
 		(at 155.702 149.606 0)
 		(effects
@@ -1154,6 +1154,17 @@
 			)
 		)
 		(uuid "3d76b3cf-fd5c-43e1-abc3-4ceb77e856c8")
+	)
+	(text "Interrupts: both TMP117 ALERT pins are open-drain and go to XIAO\n interrupt pins (PCB_TEMP_ALERT pulled up by R604, BODY_TEMP_OS pulled up by R603).\n Firmware sets the THigh/TLow limits so each TMP117 raises an interrupt\n on a significant temperature change instead of being polled."
+		(exclude_from_sim no)
+		(at 145.034 113.03 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "a1455f18-d329-474d-bb0c-36f124bbabfa")
 	)
 	(text "J601: Adafruit TMP117 breakout (4821), 5 wires soldered to its header pads:\npin1 = VCC, pin2 = GND, pin3 = SDA, pin4 = SCL, pin5 = INT (alert, pulled up by R603).\nI2C address 0x48 (default). Do NOT bridge the ADDR jumper: 0x49 is used by the board TMP117."
 		(exclude_from_sim no)
@@ -3423,7 +3434,7 @@
 				)
 			)
 		)
-		(property "Value" "PPG"
+		(property "Value" "S5B-PH-K-S"
 			(at 153.67 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3557,7 +3568,7 @@
 				)
 			)
 		)
-		(property "Value" "SKINPOD"
+		(property "Value" "S5B-PH-K-S"
 			(at 87.63 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
