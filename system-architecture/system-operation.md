@@ -107,9 +107,7 @@ The sequence diagram shows the two-way communication between the embedded device
 <br>
 
 <div align="center">
-    <img src="./assets/system-architecture/assets/Sequence Diagram.drawio.png" alt="System Communication Sequence Diagram">
+    <img src="./assets/sys-op-sd.png" alt="System Communication Sequence Diagram">
 </div>
 
 <br>
-
-### 2.2 Finite State Machine of the Device
