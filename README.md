@@ -25,9 +25,12 @@ docs/
  ┃ ┃ ┣ fab/
  ┃ ┃ ┃ ┗ gerbers/
  ┃ ┃ ┣ lib/
- ┃ ┃ ┣ outputs/
  ┃ ┃ ┗ simulation/
- ┃ ┗ schematics/                # Auto-Generated Printables
+ ┃ ┣ abtrs_torso_information/
+ ┃ ┣ bom/
+ ┃ ┣ datasheets/
+ ┃ ┣ schematics/
+ ┃ ┗ wiring-diagrams/                # Auto-Generated Printables
  ┣ software-documentation/      # Software Business Logic Documents
  ┣ system-architecture/         # Overarching System Architecture Documents
  ┗ user-manuals/                # Operation and Maintenance Documents (Empty)
