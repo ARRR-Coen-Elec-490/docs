@@ -30,6 +30,8 @@ The image above provides an expanded view of the hardware layer, as well as the 
 
 ### 3.2 Embedded MCU Layer
 
+Proposed detailed behavior: [MCU input, metric calculation, safety, and output flowchart](../software-documentation/mcu-flow.md).
+
 <div align="center">
     <img src="./assets/mcu-layer.png" alt="Embedded MCU Layer">
 </div>
@@ -41,6 +43,8 @@ The image above provides an expanded view of the ambedded microcontroller layer,
 <br>
 
 ### 3.3 Data Transfer Layer
+
+Proposed detailed behavior: [Bluetooth session, encoding/decoding, and recovery sequence diagrams](../software-documentation/ble-sequence.md).
 
 <div align="center">
     <img src="./assets/data-transfer-layer.png" alt="Data Transfer Layer">
@@ -70,6 +74,8 @@ In the event that a disruption occurs during the session, a failsafe operation w
 <br>
 
 ### 3.5 Machine Learning Layer
+
+Proposed detailed behavior: [ML training, model comparison, deployment, and inference flowcharts](../software-documentation/ml-flow.md). See the [design review notes](../software-documentation/README.md) for assumptions and differences from earlier documents.
 
 <div align="center">
     <img src="./assets/ml-layer.png" alt="Machine Learning Layer">
