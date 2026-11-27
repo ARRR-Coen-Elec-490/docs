@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "ABTRS Torso Board")
-		(date "2026-11-24")
-		(rev "0.3")
+		(date "2026-11-27")
+		(rev "0.4")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
 	(lib_symbols
@@ -3403,7 +3403,7 @@
 				)
 			)
 		)
-		(property "Value" "Cord"
+		(property "Value" "S2B-PH-K-S"
 			(at 67.31 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)

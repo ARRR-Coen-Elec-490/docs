@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "ABTRS Torso Board")
-		(date "2026-11-24")
-		(rev "0.3")
+		(date "2026-11-27")
+		(rev "0.4")
 		(company "Team 23 - Concordia ELEC 490 - ABTRS")
 	)
 	(lib_symbols
@@ -1427,7 +1427,7 @@
 				)
 			)
 		)
-		(property "Value" "LiPo"
+		(property "Value" "S2B-PH-K-S"
 			(at 130.81 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1437,7 +1437,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal"
 			(at 130.81 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -1470,7 +1470,7 @@
 				)
 			)
 		)
-		(property "MPN" "B2B-PH-K-S"
+		(property "MPN" "S2B-PH-K-S"
 			(at 130.81 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -1503,7 +1503,7 @@
 				)
 			)
 		)
-		(property "Supplier P/N" "455-1704-ND"
+		(property "Supplier P/N" "455-1719-ND"
 			(at 130.81 93.98 0)
 			(hide yes)
 			(show_name no)
