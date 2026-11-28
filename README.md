@@ -21,16 +21,11 @@ docs/
  ┣ ai-usage/                    # AI Prompting Templates and Logs (Empty)
  ┣ hardware-documentation/      # PCB & BOM Documents
  ┃ ┣ abtrs_torso/               # KiCAD PCB, Schematics, and Simulations
- ┃ ┃ ┣ 3dmodels/
- ┃ ┃ ┣ fab/
- ┃ ┃ ┃ ┗ gerbers/
- ┃ ┃ ┣ lib/
- ┃ ┃ ┗ simulation/
- ┃ ┣ abtrs_torso_information/
- ┃ ┣ bom/
- ┃ ┣ datasheets/
- ┃ ┣ schematics/
- ┃ ┗ wiring-diagrams/                # Auto-Generated Printables
+ ┃ ┣ abtrs_torso_information/   # PCB Support Documents
+ ┃ ┣ bom/                       # Bill of Materials
+ ┃ ┣ datasheets/                # Datasheets for all thirs-party components
+ ┃ ┣ schematics/                # Auto-Generated Printables
+ ┃ ┗ wiring-diagrams/           # System-Level Wiring Information
  ┣ software-documentation/      # Software Business Logic Documents
  ┣ system-architecture/         # Overarching System Architecture Documents
  ┗ user-manuals/                # Operation and Maintenance Documents (Empty)
