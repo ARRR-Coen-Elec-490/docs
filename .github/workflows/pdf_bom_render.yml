@@ -1,0 +1,53 @@
+name: "BOM Printable Creation"
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "hardware-documentation/bom/**/*.xlsx"
+      - "!**/~$*.xlsx"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  render-bom:
+    name: Convert XLSX BOM to PDF
+    runs-on: ubuntu-latest
+    steps:
+      # STEP 1: Pull the latest code, including any Git LFS Assets
+      - name: Checkout Code Base
+        uses: actions/checkout@v6
+        with:
+          lfs: true
+
+      # STEP 2: Install LibreOffice Calc for XLSX to PDF conversion
+      - name: Install LibreOffice Calc
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-calc fonts-liberation
+
+      # STEP 3: Convert every XLSX to a same-name PDF in the same folder
+      - name: Export BOMs to PDF
+        env:
+          HOME: /tmp
+        run: |
+          find hardware-documentation/bom \
+            -name '*.xlsx' \
+            -not -name '~$*.xlsx' \
+            -print0 | while IFS= read -r -d '' xlsx; do
+              dir=$(dirname "$xlsx")
+              echo "Converting BOM: $xlsx"
+              libreoffice --headless --convert-to pdf --outdir "$dir" "$xlsx"
+          done
+
+      # STEP 4: Create a Pull Request with the generated PDFs
+      - name: Create Pull Request for the BOM Printables
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "docs/hardware-documentation: auto-generate human-readable BOM"
+          branch: docs/auto-bom-pdfs
+          delete-branch: true
+          title: "docs: auto-generate BOM PDFs"
+          body: |
+            Automated PDF export of updated Excel BOMs from `main`.
